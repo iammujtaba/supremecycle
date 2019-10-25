@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+{% block body %}
+<div class="container my-4  bg-warning">
+    <form   method="post" action="/shop/contact/">{% csrf_token %}
+        <div class="col-lg-6 mx-auto">
+            <h3 class="col-lg-6 mx-auto">Contact Us</h3>
+            <h6 style="font-weight:bold">We are here to resolve all your doubts and problems</h6><h6 class="text-center" style="font-weight:bold"> "We always learn from our mistakes...."</h6>
+        </div>
+        <div style='font-weight:bold' class="col-lg-8 mx-auto">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label id="lblname" for="name">Name</label>
+                <input class="form-control" id="name" type="text" name="name" placeholder="Enter Your Name" required>
+                <label for="phone">Phone</label>
+                <input class="form-control" id="phone" type="tel" name="phone"placeholder="Enter Your Phone Number" required>
+                <label for="email">Email ID</label>
+                <input class="form-control" id="email" type="email" name="email" placeholder="Enter Your Email Id" required>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="query">Write Your Query Here</label>
+                <textarea class="form-control" id="query" name="query" rows="7" required></textarea>
+            </div>
+        </div>
+        <button type="submit" name="submitQuery" class="btn btn-success my-3" >Submit</button>
+        <!--onclick="func()"-->
+    </div>
+    </form>
+</div>
+
+{% endblock %}
+

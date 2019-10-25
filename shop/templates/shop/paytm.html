@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html head="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Paytm Marchent Payment Page</title>
+    </head>
+    <body>
+        <h1>Redirecting to Marchent Page....</h1>
+        <h3>Please Do Not Reload This Page......</h3>
+        <form action="https://securegw-stage.paytm.in/theia/processTransaction" method="post" name="paytm">
+            {% for key,value in param_dict.items %}
+                <input type="hidden" value={{value}} name={{key}}>
+            {% endfor %}
+        </form>
+    </body>
+    <script>
+        document.paytm.submit();
+    </script>
+</html>
+
