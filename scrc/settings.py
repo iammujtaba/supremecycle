@@ -123,7 +123,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # MANAGING THE MEDIA
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 MEDIA_ROOT= os.path.join(BASE_DIR,"media")
 MEDIA_URL='/media/'
 django_heroku.settings(locals())
